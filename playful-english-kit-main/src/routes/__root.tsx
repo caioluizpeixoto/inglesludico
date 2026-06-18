@@ -99,9 +99,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.pixelId = "lt_px_f88824dcc7d5";
+              var a = document.createElement("script");
+              a.setAttribute("async", "");
+              a.setAttribute("defer", "");
+              a.setAttribute("src", "https://lowtrack.com.br/pixel.js");
+              document.head.appendChild(a);
+            `,
+          }}
+        />
       </head>
       <body>
         {children}
