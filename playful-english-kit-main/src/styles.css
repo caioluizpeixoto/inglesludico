@@ -1,0 +1,139 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sun: var(--sun);
+  --color-leaf: var(--leaf);
+  --color-sky: var(--sky);
+  --color-berry: var(--berry);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --shadow-pop: var(--shadow-pop);
+  --shadow-soft: var(--shadow-soft);
+}
+
+:root {
+  --radius: 1.25rem;
+  --font-display: "Fredoka", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+
+  --background: oklch(0.98 0.02 85);
+  --foreground: oklch(0.25 0.05 280);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.05 280);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.05 280);
+
+  --primary: oklch(0.65 0.21 25);              /* coral red */
+  --primary-foreground: oklch(0.99 0.01 85);
+
+  --secondary: oklch(0.78 0.18 70);            /* tangerine */
+  --secondary-foreground: oklch(0.25 0.05 280);
+
+  --muted: oklch(0.95 0.03 85);
+  --muted-foreground: oklch(0.45 0.04 280);
+
+  --accent: oklch(0.85 0.17 200);              /* sky blue */
+  --accent-foreground: oklch(0.25 0.05 280);
+
+  --destructive: oklch(0.6 0.24 27);
+  --destructive-foreground: oklch(0.99 0.01 85);
+
+  --border: oklch(0.9 0.03 85);
+  --input: oklch(0.92 0.02 85);
+  --ring: oklch(0.65 0.21 25);
+
+  --sun: oklch(0.88 0.17 90);
+  --leaf: oklch(0.75 0.18 145);
+  --sky: oklch(0.82 0.13 220);
+  --berry: oklch(0.7 0.2 350);
+
+  --shadow-pop: 0 8px 0 0 oklch(0.25 0.05 280 / 0.9);
+  --shadow-soft: 0 18px 40px -12px oklch(0.25 0.05 280 / 0.25);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at 10% 5%, oklch(0.88 0.17 90 / 0.35), transparent 40%),
+      radial-gradient(circle at 90% 20%, oklch(0.85 0.17 200 / 0.35), transparent 40%),
+      radial-gradient(circle at 50% 90%, oklch(0.7 0.2 350 / 0.2), transparent 50%);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .btn-pop {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 font-display text-lg font-bold transition-transform duration-150 active:translate-y-1;
+    border: 3px solid oklch(0.25 0.05 280);
+    box-shadow: var(--shadow-pop);
+  }
+  .btn-pop:hover {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+  .card-pop {
+    border: 3px solid oklch(0.25 0.05 280);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-pop);
+    background: var(--card);
+  }
+  .tag {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold;
+    border: 2px solid oklch(0.25 0.05 280);
+  }
+}
+
+@layer utilities {
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+  .pause-on-hover:hover {
+    animation-play-state: paused;
+  }
+}
