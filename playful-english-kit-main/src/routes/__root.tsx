@@ -101,27 +101,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           a.setAttribute("src", "https://lowtrack.com.br/pixel.js");
           document.head.appendChild(a);
         `,
-      },
-      {
-        type: "text/javascript",
-        children: `
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2083137975568617');
-fbq('track', 'PageView');
-        `,
-      },
-      {
-        src: "https://fluxo-track.vercel.app/fluxofy-pixel.js",
-        "data-product-id": "9df34b62-c64f-4327-8f63-3587f52035a0",
-        "data-user-id": "3f024dde-c859-4515-9d1e-9d1334447d61",
-        "data-ic-url": "https://pay.wiapy.com/",
       }
     ]
   }),
@@ -155,6 +134,30 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    // Meta Pixel Code
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    // @ts-expect-error fbq is dynamically loaded
+    fbq('init', '2083137975568617');
+    // @ts-expect-error fbq is dynamically loaded
+    fbq('track', 'PageView');
+
+    // FluxoFy Tracking Integration
+    const fluxScript = document.createElement("script");
+    fluxScript.src = "https://fluxo-track.vercel.app/fluxofy-pixel.js";
+    fluxScript.setAttribute("data-product-id", "9df34b62-c64f-4327-8f63-3587f52035a0");
+    fluxScript.setAttribute("data-user-id", "3f024dde-c859-4515-9d1e-9d1334447d61");
+    fluxScript.setAttribute("data-ic-url", "https://pay.wiapy.com/");
+    document.head.appendChild(fluxScript);
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
