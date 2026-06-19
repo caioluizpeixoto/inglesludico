@@ -90,6 +90,40 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" },
     ],
+    scripts: [
+      {
+        type: "text/javascript",
+        children: `
+          window.pixelId = "lt_px_f88824dcc7d5";
+          var a = document.createElement("script");
+          a.setAttribute("async", "");
+          a.setAttribute("defer", "");
+          a.setAttribute("src", "https://lowtrack.com.br/pixel.js");
+          document.head.appendChild(a);
+        `,
+      },
+      {
+        type: "text/javascript",
+        children: `
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2083137975568617');
+fbq('track', 'PageView');
+        `,
+      },
+      {
+        src: "https://fluxo-track.vercel.app/fluxofy-pixel.js",
+        "data-product-id": "9df34b62-c64f-4327-8f63-3587f52035a0",
+        "data-user-id": "3f024dde-c859-4515-9d1e-9d1334447d61",
+        "data-ic-url": "https://pay.wiapy.com/",
+      }
+    ]
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -102,35 +136,6 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pt-BR">
       <head>
         <HeadContent />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.pixelId = "lt_px_f88824dcc7d5";
-              var a = document.createElement("script");
-              a.setAttribute("async", "");
-              a.setAttribute("defer", "");
-              a.setAttribute("src", "https://lowtrack.com.br/pixel.js");
-              document.head.appendChild(a);
-            `,
-          }}
-        />
-        {/* FluxoFy & Meta Pixel Code */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2083137975568617');
-fbq('track', 'PageView');
-            `
-          }}
-        />
         <noscript>
           <img
             height="1"
@@ -139,13 +144,6 @@ fbq('track', 'PageView');
             src="https://www.facebook.com/tr?id=2083137975568617&ev=PageView&noscript=1"
           />
         </noscript>
-        {/* FluxoFy Tracking Integration */}
-        <script
-          src="https://fluxo-track.vercel.app/fluxofy-pixel.js"
-          data-product-id="9df34b62-c64f-4327-8f63-3587f52035a0"
-          data-user-id="3f024dde-c859-4515-9d1e-9d1334447d61"
-          data-ic-url="https://pay.wiapy.com/"
-        ></script>
       </head>
       <body>
         {children}
