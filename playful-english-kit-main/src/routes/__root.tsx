@@ -114,6 +114,38 @@ function RootShell({ children }: { children: ReactNode }) {
             `,
           }}
         />
+        {/* FluxoFy & Meta Pixel Code */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2083137975568617');
+fbq('track', 'PageView');
+            `
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=2083137975568617&ev=PageView&noscript=1"
+          />
+        </noscript>
+        {/* FluxoFy Tracking Integration */}
+        <script
+          src="https://fluxo-track.vercel.app/fluxofy-pixel.js"
+          data-product-id="9df34b62-c64f-4327-8f63-3587f52035a0"
+          data-user-id="3f024dde-c859-4515-9d1e-9d1334447d61"
+          data-ic-url="https://pay.wiapy.com/"
+        ></script>
       </head>
       <body>
         {children}
