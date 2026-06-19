@@ -137,18 +137,20 @@ function RootComponent() {
 
   useEffect(() => {
     // Meta Pixel Code
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    // @ts-expect-error fbq is dynamically loaded
-    fbq('init', '2083137975568617');
-    // @ts-expect-error fbq is dynamically loaded
-    fbq('track', 'PageView');
+    const fbScript = document.createElement("script");
+    fbScript.innerHTML = `
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2083137975568617');
+      fbq('track', 'PageView');
+    `;
+    document.head.appendChild(fbScript);
 
     // FluxoFy Tracking Integration
     const fluxScript = document.createElement("script");
