@@ -146,6 +146,7 @@ function PurchaseNotification() {
 }
 
 function SalesPage() {
+  const [isUpsellOpen, setIsUpsellOpen] = useState(false);
   return (
     <main className="overflow-x-hidden">
       <div className="bg-primary text-primary-foreground">
@@ -363,6 +364,62 @@ function SalesPage() {
         </div>
       </section>
 
+      {/* BONUSES */}
+      <section className="px-4 py-20 relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute top-10 left-10 h-32 w-32 rounded-full bg-sun/20 blur-3xl -z-10" />
+        <div className="absolute bottom-10 right-10 h-40 w-40 rounded-full bg-accent/20 blur-3xl -z-10" />
+        
+        <div className="mx-auto max-w-6xl">
+          <SectionTitle 
+            kicker="🎁 Bônus Exclusivos" 
+            title="Presentes Liberados Apenas Hoje!" 
+            subtitle="Garantindo o seu Kit Inglês Lúdico agora, você também leva esses 3 materiais incríveis totalmente de graça. É o empurrãozinho final para aulas perfeitas."
+          />
+          <div className="mt-14 grid gap-8 md:grid-cols-3">
+            {[
+              { 
+                title: "Jogo da Memória em Inglês", 
+                desc: "Cartas prontas para imprimir de um jogo super divertido! Fixe o vocabulário enquanto as crianças treinam a memória e a pronúncia.", 
+                value: "R$ 39,90",
+                color: "bg-sun",
+                img: "/flashcards.png"
+              },
+              { 
+                title: "Super Kit das Cores", 
+                desc: "Um pacote premium de atividades práticas e dinâmicas infalíveis para as crianças decorarem todas as cores em inglês brincando.", 
+                value: "R$ 67,90",
+                color: "bg-accent",
+                img: "/cores.png"
+              },
+              { 
+                title: "Certificado Bilíngue", 
+                desc: "Um lindo certificado de conclusão bilíngue (Inglês/Português) para celebrar o aprendizado e deixar os pequenos cheios de orgulho.", 
+                value: "R$ 29,90",
+                color: "bg-leaf",
+                img: "/certificado.png"
+              }
+            ].map((b, i) => (
+              <div key={b.title} className="card-pop flex flex-col p-6 bg-card text-center relative transition-transform hover:-translate-y-2" style={{ transform: `rotate(${(i % 2 === 0 ? -1 : 1) * 1.5}deg)` }}>
+                <div className={`absolute -top-4 -right-4 h-12 w-12 rounded-full ${b.color} border-[3px] border-foreground flex items-center justify-center rotate-12 z-10 shadow-pop`}>
+                  <Gift className="h-6 w-6 text-foreground" />
+                </div>
+                <img src={b.img} alt={b.title} className="aspect-square w-full rounded-xl border-[3px] border-foreground object-cover bg-muted/60" />
+                <div className="mt-6 flex-1">
+                  <span className="tag mb-3 bg-secondary/20 text-secondary-foreground border-secondary/30">Bônus #{i + 1}</span>
+                  <h3 className="text-xl font-bold">{b.title}</h3>
+                  <p className="mt-3 text-sm text-muted-foreground">{b.desc}</p>
+                </div>
+                <div className="mt-5 rounded-xl bg-muted/50 p-3 border-[2px] border-dashed border-foreground/20">
+                  <p className="text-xs text-muted-foreground">Valor normal: <span className="line-through">{b.value}</span></p>
+                  <p className="font-display font-bold text-leaf text-xl mt-0.5">Hoje: GRÁTIS!</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* OFFERS */}
       <section id="ofertas" className="px-4 py-20">
         <div className="mx-auto max-w-6xl">
@@ -379,7 +436,7 @@ function SalesPage() {
                 <h3 className="text-2xl">Kit Inglês Lúdico Essencial</h3>
               </div>
               <div className="mt-6">
-                <span className="font-display text-5xl font-bold">R$17,90</span>
+                <span className="font-display text-5xl font-bold">R$10,00</span>
                 <p className="text-sm text-muted-foreground">Pagamento único</p>
               </div>
               <ul className="mt-6 flex-1 space-y-3">
@@ -390,9 +447,9 @@ function SalesPage() {
                   </li>
                 ))}
               </ul>
-              <a href="https://pay.wiapy.com/58WtAgb6G-T" className="btn-pop mt-8 w-full bg-secondary text-secondary-foreground">
+              <button onClick={(e) => { e.preventDefault(); setIsUpsellOpen(true); }} className="btn-pop mt-8 w-full bg-secondary text-secondary-foreground">
                 QUERO O KIT ESSENCIAL
-              </a>
+              </button>
               <div className="mt-4 flex items-center justify-center gap-2 text-sm font-bold text-muted-foreground animate-pulse">
                 <span>90% escolhem o plano Completo</span>
                 <ArrowRight className="hidden h-5 w-5 lg:block text-primary" />
@@ -431,6 +488,28 @@ function SalesPage() {
           </div>
         </div>
       </section>
+
+      {/* EXPERT */}
+      <section className="px-4 py-20 bg-sun/10">
+        <div className="mx-auto max-w-5xl">
+          <div className="card-pop flex flex-col md:flex-row items-center gap-10 bg-card p-8 md:p-12 border-4 border-foreground">
+            <div className="w-56 h-56 md:w-64 md:h-64 shrink-0 rounded-full border-[8px] border-secondary bg-primary/20 p-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-3 transition-transform hover:rotate-2">
+              <img src="/prof.png" alt="Teacher Hellen" className="w-full h-full rounded-full object-cover border-[3px] border-foreground bg-muted" />
+            </div>
+            <div className="text-center md:text-left flex-1">
+              <span className="tag bg-sun/30 text-foreground border-foreground mb-4">Quem criou o material?</span>
+              <h2 className="text-3xl md:text-4xl font-bold">Nice to meet you, sou a Teacher Hellen! 👋</h2>
+              <p className="mt-5 text-muted-foreground text-lg">
+                Sou professora apaixonada por educação infantil e criei o <strong>Kit Inglês Lúdico</strong> porque sei exatamente como é frustrante tentar prender a atenção das crianças com atividades sem graça.
+              </p>
+              <p className="mt-4 text-muted-foreground text-lg">
+                Todo o material foi testado e validado em sala de aula para trazer <strong>mais cor, movimento e diversão</strong> para o ensino. Meu objetivo é que seus alunos amem aprender inglês e que você tenha muito mais praticidade na hora de planejar suas aulas!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* GUARANTEE */}
       <section className="px-4 py-20">
@@ -487,6 +566,7 @@ function SalesPage() {
         © {new Date().getFullYear()} Kit Inglês Lúdico · Todos os direitos reservados
       </footer>
       <PurchaseNotification />
+      <UpsellModal isOpen={isUpsellOpen} />
     </main>
   );
 }
@@ -503,6 +583,43 @@ function FaqItem({ q, a, defaultOpen = false }: { q: string; a: string; defaultO
         <ChevronDown className={`h-5 w-5 shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       {open && <div className="border-t-[3px] border-dashed border-foreground/20 p-5 text-muted-foreground">{a}</div>}
+    </div>
+  );
+}
+
+function UpsellModal({ isOpen }: { isOpen: boolean }) {
+  if (!isOpen) return null;
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-sm p-4">
+      <div className="card-pop relative w-full max-w-md bg-card p-6 text-center md:p-8 animate-in zoom-in-95 duration-200 border-4 border-primary">
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border-[3px] border-foreground bg-primary px-4 py-1 text-sm font-bold text-primary-foreground">
+          🎁 OFERTA ESPECIAL
+        </div>
+        
+        <h2 className="mt-4 text-2xl font-bold md:text-3xl">Espere! Temos uma surpresa para você 😍</h2>
+        <p className="mt-3 text-muted-foreground">
+          Antes de finalizar, liberamos um <strong>upgrade exclusivo</strong>. Por apenas <strong>R$ 7,90 a mais</strong> (total R$ 17,90), você pode levar a versão Completa com:
+        </p>
+        
+        <div className="mt-5 text-left bg-muted/50 p-4 rounded-xl border-[2px] border-dashed border-foreground/20">
+          <ul className="space-y-2 text-sm font-semibold">
+            <li className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf" /> +100 Atividades Extras Educativas</li>
+            <li className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf" /> 50 Dinâmicas Divertidas</li>
+            <li className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf" /> Todos os 3 Bônus Inclusos</li>
+          </ul>
+        </div>
+
+        <p className="mt-4 text-xs font-bold text-primary/80">Essa é uma oportunidade única antes de concluir o seu pedido. Aproveite!</p>
+
+        <div className="mt-6 flex flex-col gap-3">
+          <a href="https://pay.wiapy.com/58WtAgb6G-T" className="btn-pop w-full bg-primary text-primary-foreground text-base h-auto py-3">
+            Sim! Quero a Versão Completa por R$ 17,90
+          </a>
+          <a href="https://pay.wiapy.com/oEND7CUYxf" className="text-xs font-bold text-muted-foreground underline hover:text-foreground mt-2">
+            Não, obrigada. Prefiro ficar apenas com o kit de R$ 10,00 por enquanto.
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
