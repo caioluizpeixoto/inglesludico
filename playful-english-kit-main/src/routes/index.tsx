@@ -159,7 +159,7 @@ function SalesPage() {
       <section className="relative px-4 pt-12 pb-20 md:pt-20 md:pb-28">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <span className="tag bg-sun">
-            <Sparkles className="h-4 w-4" /> Para Teachers da Educação Infantil
+            <Sparkles className="h-4 w-4" /> Para Teachers da Educação Infantil e Pais
           </span>
           <h1 className="mt-6 text-5xl leading-[1.05] md:text-6xl lg:text-7xl">
             Suas aulas de inglês{" "}
@@ -167,11 +167,10 @@ function SalesPage() {
               <span className="relative z-10 text-primary">nunca mais</span>
               <span className="absolute -bottom-2 left-0 right-0 h-3 -rotate-1 rounded-full bg-sun" />
             </span>{" "}
-            serão as mesmas.
+            serão as mesmas com essas +100 Atividades Lúdicas.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-            Transforme o aprendizado em um momento divertido, interativo e inesquecível para seus alunos.
-            Chega de atividades que não prendem a atenção das crianças.
+            Chega de atividades que não prendem a atenção. Chegou o mega pacote com mais de uma centena de recursos divertidos, interativos e prontos para imprimir.
           </p>
 
           <div className="relative my-10 w-full max-w-2xl">
