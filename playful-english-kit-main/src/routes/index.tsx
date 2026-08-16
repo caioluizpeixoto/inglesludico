@@ -57,9 +57,9 @@ function ImagePlaceholder({ label, className = "" }: { label: string; className?
 function SectionTitle({ kicker, title, subtitle }: { kicker?: string; title: string; subtitle?: string }) {
   return (
     <div className="mx-auto max-w-2xl text-center">
-      {kicker && <span className="tag bg-sun mb-4">{kicker}</span>}
-      <h2 className="text-4xl md:text-5xl">{title}</h2>
-      {subtitle && <p className="mt-4 text-lg text-muted-foreground">{subtitle}</p>}
+      {kicker && <span className="tag bg-sun mb-3 text-xs sm:text-sm">{kicker}</span>}
+      <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">{title}</h2>
+      {subtitle && <p className="mt-3 text-sm sm:text-base md:text-lg text-muted-foreground">{subtitle}</p>}
     </div>
   );
 }
@@ -150,77 +150,77 @@ function SalesPage() {
   return (
     <main className="overflow-x-hidden">
       <div className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-6xl px-4 py-3 text-center text-sm font-bold md:text-base">
+        <div className="mx-auto max-w-6xl px-4 py-2.5 text-center text-xs sm:text-sm font-bold md:text-base">
           🔥 Oferta especial por tempo limitado · acesso vitalício
         </div>
       </div>
 
       {/* HERO */}
-      <section className="relative px-4 pt-12 pb-20 md:pt-20 md:pb-28">
+      <section className="relative px-4 pt-6 pb-8 sm:pt-10 sm:pb-12 md:pt-16 md:pb-14">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-          <span className="tag bg-sun">
-            <Sparkles className="h-4 w-4" /> Para Teachers da Educação Infantil e Pais
+          <span className="tag bg-sun text-xs sm:text-sm">
+            <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4" /> Para Teachers da Educação Infantil e Pais
           </span>
-          <h1 className="mt-6 text-5xl leading-[1.05] md:text-6xl lg:text-7xl">
+          <h1 className="mt-4 sm:mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-[1.1] max-w-3xl">
             Suas aulas de inglês{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-primary">nunca mais</span>
-              <span className="absolute -bottom-2 left-0 right-0 h-3 -rotate-1 rounded-full bg-sun" />
+              <span className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-2 sm:h-3 -rotate-1 rounded-full bg-sun" />
             </span>{" "}
             serão as mesmas com essas +100 Atividades Lúdicas.
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
+          <p className="mt-4 sm:mt-5 max-w-2xl text-base sm:text-lg md:text-xl text-muted-foreground">
             Chega de atividades que não prendem a atenção. Chegou o mega pacote com mais de uma centena de recursos divertidos, interativos e prontos para imprimir.
           </p>
 
-          <div className="relative my-10 w-full max-w-2xl">
-            <div className="absolute -left-6 -top-6 -z-0 h-32 w-32 rounded-full bg-sun" />
-            <div className="absolute -bottom-8 -right-4 -z-0 h-24 w-24 rotate-12 rounded-3xl bg-accent" />
+          <div className="relative my-6 sm:my-8 md:my-10 w-full max-w-2xl">
+            <div className="absolute -left-3 -top-3 sm:-left-6 sm:-top-6 -z-0 h-20 w-20 sm:h-32 sm:w-32 rounded-full bg-sun" />
+            <div className="absolute -bottom-4 -right-2 sm:-bottom-8 sm:-right-4 -z-0 h-16 w-16 sm:h-24 sm:w-24 rotate-12 rounded-3xl bg-accent" />
             <img src="/hero.png" alt="Hero Kit Inglês" className="relative aspect-[4/3] w-full rounded-2xl border-[3px] border-foreground object-cover shadow-pop rotate-1" />
-            <div className="card-pop absolute -bottom-6 left-6 flex items-center gap-3 rounded-full px-4 py-3">
-              <div className="rounded-full bg-leaf p-2">
-                <Check className="h-5 w-5" />
+            <div className="card-pop absolute -bottom-4 left-3 sm:-bottom-6 sm:left-6 flex items-center gap-2 sm:gap-3 rounded-full px-3 py-2 sm:px-4 sm:py-3">
+              <div className="rounded-full bg-leaf p-1.5 sm:p-2">
+                <Check className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
               </div>
-              <p className="text-sm font-bold">Pronto para imprimir</p>
+              <p className="text-xs sm:text-sm font-bold">Pronto para imprimir</p>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a href="#ofertas" className="btn-pop bg-primary text-primary-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <a href="#ofertas" className="btn-pop bg-primary text-primary-foreground text-base sm:text-lg py-3 px-6 sm:py-4 sm:px-8">
               Quero meu Kit agora
             </a>
-            <div className="flex items-center gap-2 text-sm font-bold">
-              <ShieldCheck className="h-5 w-5 text-leaf" /> Garantia de 7 dias
+            <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-bold">
+              <ShieldCheck className="h-4 w-4 sm:h-5 sm:w-5 text-leaf" /> Garantia de 7 dias
             </div>
           </div>
 
-          <div className="mt-8 flex flex-col items-center gap-3 md:flex-row md:gap-4">
+          <div className="mt-6 sm:mt-8 flex flex-col items-center gap-2 sm:gap-3 md:flex-row md:gap-4">
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map((i) => (
-                <img key={i} src={`/avaliacao${i}.png`} alt={`Avaliação ${i}`} className="h-10 w-10 rounded-full border-[3px] border-foreground object-cover bg-card" />
+                <img key={i} src={`/avaliacao${i}.png`} alt={`Avaliação ${i}`} className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border-[2px] sm:border-[3px] border-foreground object-cover bg-card" />
               ))}
             </div>
             <div className="text-center md:text-left">
               <div className="flex justify-center gap-0.5 text-secondary md:justify-start">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current" />
+                  <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-current" />
                 ))}
               </div>
-              <p className="text-sm font-bold">+1.000 professoras felizes</p>
+              <p className="text-xs sm:text-sm font-bold">+1.000 professoras felizes</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* BENEFITS */}
-      <section className="px-4 py-20">
+      <section className="px-4 py-8 sm:py-10 md:py-14">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             kicker="Por que funciona?"
             title="Inglês que prende a atenção das crianças"
             subtitle="Com o Kit Inglês Lúdico, seus alunos aprendem inglês brincando através de recursos visuais, atividades práticas e materiais que eles realmente gostam de fazer."
           />
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4 text-center">
+          <div className="mt-6 sm:mt-8 md:mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4 text-center">
             {benefits.map((b, i) => (
               <div
                 key={b.title}
@@ -239,32 +239,32 @@ function SalesPage() {
       </section>
 
       {/* FOR WHO */}
-      <section className="px-4 py-20">
+      <section className="px-4 py-8 sm:py-10 md:py-14">
         <div className="mx-auto max-w-6xl">
           <SectionTitle kicker="Perfeito para" title="Feito pra quem ensina com o coração" />
-          <div className="mt-14 grid gap-8 md:grid-cols-2">
-            <div className="card-pop bg-sun/60 p-8">
+          <div className="mt-6 sm:mt-8 md:mt-10 grid gap-6 md:grid-cols-2">
+            <div className="card-pop bg-sun/60 p-6 sm:p-8">
               <div className="flex items-center gap-3">
-                <GraduationCap className="h-10 w-10" />
-                <h3 className="text-2xl">Professores</h3>
+                <GraduationCap className="h-8 w-8 sm:h-10 sm:w-10" />
+                <h3 className="text-xl sm:text-2xl">Professores</h3>
               </div>
-              <ul className="mt-6 space-y-3">
+              <ul className="mt-4 sm:mt-6 space-y-3">
                 {["Mais participação dos alunos", "Menos tempo planejando", "Aulas mais divertidas", "Melhor fixação do conteúdo"].map((t) => (
-                  <li key={t} className="flex items-start gap-3 font-semibold">
-                    <Check className="mt-1 h-5 w-5 shrink-0 text-primary" /> {t}
+                  <li key={t} className="flex items-start gap-3 font-semibold text-sm sm:text-base">
+                    <Check className="mt-1 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-primary" /> {t}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="card-pop bg-accent/60 p-8">
+            <div className="card-pop bg-accent/60 p-6 sm:p-8">
               <div className="flex items-center gap-3">
-                <Users className="h-10 w-10" />
-                <h3 className="text-2xl">Pais e Homeschool</h3>
+                <Users className="h-8 w-8 sm:h-10 sm:w-10" />
+                <h3 className="text-xl sm:text-2xl">Pais e Homeschool</h3>
               </div>
-              <ul className="mt-6 space-y-3">
+              <ul className="mt-4 sm:mt-6 space-y-3">
                 {["Aprendizado divertido em casa", "Fácil de aplicar", "Sem necessidade de experiência em ensino", "Atividades educativas e criativas"].map((t) => (
-                  <li key={t} className="flex items-start gap-3 font-semibold">
-                    <Check className="mt-1 h-5 w-5 shrink-0 text-primary" /> {t}
+                  <li key={t} className="flex items-start gap-3 font-semibold text-sm sm:text-base">
+                    <Check className="mt-1 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-primary" /> {t}
                   </li>
                 ))}
               </ul>
@@ -274,14 +274,14 @@ function SalesPage() {
       </section>
 
       {/* RESOURCES */}
-      <section className="px-4 py-20">
+      <section className="px-4 py-8 sm:py-10 md:py-14">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             kicker="O que você recebe"
             title="Veja alguns dos recursos do Kit"
             subtitle="Atividades prontas que combinam imagem, movimento e fala para uma experiência rica de aprendizado."
           />
-          <div className="mt-14 relative w-full overflow-hidden flex py-4">
+          <div className="mt-6 sm:mt-8 md:mt-10 relative w-full overflow-hidden flex py-4">
             <div className="flex w-max animate-marquee gap-5 pause-on-hover">
               {[...resources, ...resources].map((r, i) => (
                 <div
@@ -302,24 +302,24 @@ function SalesPage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="px-4 py-20">
+      <section className="px-4 py-8 sm:py-10 md:py-14">
         <div className="mx-auto max-w-6xl">
           <SectionTitle kicker="Como funciona" title="Em 3 passos simples" />
-          <div className="mt-14 grid gap-8 md:grid-cols-3">
+          <div className="mt-6 sm:mt-8 md:mt-10 grid gap-6 md:grid-cols-3">
             {[
               { icon: Download, title: "Receba o acesso imediatamente", desc: "Após a compra você recebe acesso instantâneo ao material.", color: "bg-sun" },
               { icon: Printer, title: "Imprima quando quiser", desc: "Use quantas vezes desejar. O acesso é vitalício.", color: "bg-accent" },
               { icon: Backpack, title: "Aplique nas suas aulas", desc: "Escolha a atividade, imprima e comece a utilizar imediatamente.", color: "bg-leaf" },
             ].map((s, i) => (
-              <div key={s.title} className="relative card-pop p-8 text-center">
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full border-[3px] border-foreground bg-primary px-4 py-1 font-display text-lg font-bold text-primary-foreground">
+              <div key={s.title} className="relative card-pop p-6 sm:p-8 text-center">
+                <div className="absolute -top-4 sm:-top-5 left-1/2 -translate-x-1/2 rounded-full border-[3px] border-foreground bg-primary px-3 sm:px-4 py-0.5 sm:py-1 font-display text-base sm:text-lg font-bold text-primary-foreground">
                   {i + 1}
                 </div>
-                <div className={`mx-auto mt-2 inline-flex rounded-2xl border-[3px] border-foreground p-4 ${s.color}`}>
-                  <s.icon className="h-8 w-8" />
+                <div className={`mx-auto mt-2 inline-flex rounded-2xl border-[3px] border-foreground p-3 sm:p-4 ${s.color}`}>
+                  <s.icon className="h-7 w-7 sm:h-8 sm:w-8" />
                 </div>
-                <h3 className="mt-4 text-xl">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+                <h3 className="mt-4 text-lg sm:text-xl">{s.title}</h3>
+                <p className="mt-2 text-xs sm:text-sm text-muted-foreground">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -327,18 +327,18 @@ function SalesPage() {
       </section>
 
       {/* SOCIAL PROOF */}
-      <section className="px-4 py-20">
+      <section className="px-4 py-8 sm:py-10 md:py-14">
         <div className="mx-auto max-w-6xl">
           <SectionTitle kicker="Quem compra, ama ❤️" title="Professores utilizam o material para" />
-          <div className="mt-12 flex flex-wrap justify-center gap-3">
+          <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-2 sm:gap-3">
             {["Educação Infantil", "ESL e EFL", "Reforço Escolar", "Homeschool", "Crianças de 4 a 8 anos"].map((t, i) => (
-              <span key={t} className="tag bg-card" style={{ transform: `rotate(${(i % 2 === 0 ? -1 : 1) * 2}deg)` }}>
-                <Check className="h-4 w-4 text-leaf" /> {t}
+              <span key={t} className="tag bg-card text-xs sm:text-sm" style={{ transform: `rotate(${(i % 2 === 0 ? -1 : 1) * 2}deg)` }}>
+                <Check className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-leaf" /> {t}
               </span>
             ))}
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-6 sm:mt-8 md:mt-10 grid gap-6 md:grid-cols-3">
             {[
               { name: "Camila R.", role: "Professora de Inglês Infantil", text: "Meus alunos pediram pra repetir a atividade! Nunca vi tanto engajamento." },
               { name: "Juliana M.", role: "Homeschool Mom", text: "Material lindo, fácil de aplicar e meu filho ama a Flower de Action Verbs." },
@@ -350,10 +350,10 @@ function SalesPage() {
                     <Star key={j} className="h-4 w-4 fill-current" />
                   ))}
                 </div>
-                <p className="mt-3 font-semibold">"{t.text}"</p>
+                <p className="mt-3 font-semibold text-sm sm:text-base">"{t.text}"</p>
                 <div className="mt-4 flex items-center justify-center gap-3">
                   <div>
-                    <p className="font-bold">{t.name}</p>
+                    <p className="font-bold text-sm sm:text-base">{t.name}</p>
                     <p className="text-xs text-muted-foreground">{t.role}</p>
                   </div>
                 </div>
@@ -364,7 +364,7 @@ function SalesPage() {
       </section>
 
       {/* BONUSES */}
-      <section className="px-4 py-20 relative overflow-hidden">
+      <section className="px-4 py-8 sm:py-10 md:py-14 relative overflow-hidden">
         {/* Background elements */}
         <div className="absolute top-10 left-10 h-32 w-32 rounded-full bg-sun/20 blur-3xl -z-10" />
         <div className="absolute bottom-10 right-10 h-40 w-40 rounded-full bg-accent/20 blur-3xl -z-10" />
@@ -375,7 +375,7 @@ function SalesPage() {
             title="Presentes Liberados Apenas Hoje!" 
             subtitle="Garantindo o seu Kit Inglês Lúdico agora, você também leva esses 3 materiais incríveis totalmente de graça. É o empurrãozinho final para aulas perfeitas."
           />
-          <div className="mt-14 grid gap-8 md:grid-cols-3">
+          <div className="mt-6 sm:mt-8 md:mt-10 grid gap-6 md:grid-cols-3">
             {[
               { 
                 title: "Jogo da Memória em Inglês", 
@@ -399,19 +399,19 @@ function SalesPage() {
                 img: "/certificado.png"
               }
             ].map((b, i) => (
-              <div key={b.title} className="card-pop flex flex-col p-6 bg-card text-center relative transition-transform hover:-translate-y-2" style={{ transform: `rotate(${(i % 2 === 0 ? -1 : 1) * 1.5}deg)` }}>
-                <div className={`absolute -top-4 -right-4 h-12 w-12 rounded-full ${b.color} border-[3px] border-foreground flex items-center justify-center rotate-12 z-10 shadow-pop`}>
-                  <Gift className="h-6 w-6 text-foreground" />
+              <div key={b.title} className="card-pop flex flex-col p-5 sm:p-6 bg-card text-center relative transition-transform hover:-translate-y-2" style={{ transform: `rotate(${(i % 2 === 0 ? -1 : 1) * 1.5}deg)` }}>
+                <div className={`absolute -top-3 -right-3 sm:-top-4 sm:-right-4 h-10 w-10 sm:h-12 sm:w-12 rounded-full ${b.color} border-[3px] border-foreground flex items-center justify-center rotate-12 z-10 shadow-pop`}>
+                  <Gift className="h-5 w-5 sm:h-6 sm:w-6 text-foreground" />
                 </div>
                 <img src={b.img} alt={b.title} className="aspect-square w-full rounded-xl border-[3px] border-foreground object-cover bg-muted/60" />
-                <div className="mt-6 flex-1">
-                  <span className="tag mb-3 bg-secondary/20 text-secondary-foreground border-secondary/30">Bônus #{i + 1}</span>
-                  <h3 className="text-xl font-bold">{b.title}</h3>
-                  <p className="mt-3 text-sm text-muted-foreground">{b.desc}</p>
+                <div className="mt-4 sm:mt-6 flex-1">
+                  <span className="tag mb-2 sm:mb-3 bg-secondary/20 text-secondary-foreground border-secondary/30 text-xs">Bônus #{i + 1}</span>
+                  <h3 className="text-lg sm:text-xl font-bold">{b.title}</h3>
+                  <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-muted-foreground">{b.desc}</p>
                 </div>
-                <div className="mt-5 rounded-xl bg-muted/50 p-3 border-[2px] border-dashed border-foreground/20">
+                <div className="mt-4 sm:mt-5 rounded-xl bg-muted/50 p-3 border-[2px] border-dashed border-foreground/20">
                   <p className="text-xs text-muted-foreground">Valor normal: <span className="line-through">{b.value}</span></p>
-                  <p className="font-display font-bold text-leaf text-xl mt-0.5">Hoje: GRÁTIS!</p>
+                  <p className="font-display font-bold text-leaf text-lg sm:text-xl mt-0.5">Hoje: GRÁTIS!</p>
                 </div>
               </div>
             ))}
@@ -420,7 +420,7 @@ function SalesPage() {
       </section>
 
       {/* OFFERS */}
-      <section id="ofertas" className="px-4 py-20">
+      <section id="ofertas" className="px-4 py-8 sm:py-10 md:py-14">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             kicker="Acesso imediato"
@@ -428,59 +428,59 @@ function SalesPage() {
             subtitle="Pagamento único · acesso vitalício · uso e downloads ilimitados"
           />
 
-          <div className="mt-14 grid items-stretch gap-8 lg:grid-cols-2">
-            <div className="card-pop flex flex-col p-8">
+          <div className="mt-6 sm:mt-8 md:mt-10 grid items-stretch gap-6 sm:gap-8 lg:grid-cols-2">
+            <div className="card-pop flex flex-col p-6 sm:p-8">
               <div className="flex items-center gap-3">
-                <Backpack className="h-8 w-8" />
-                <h3 className="text-2xl">Kit Inglês Lúdico Essencial</h3>
+                <Backpack className="h-7 w-7 sm:h-8 sm:w-8" />
+                <h3 className="text-xl sm:text-2xl">Kit Inglês Lúdico Essencial</h3>
               </div>
-              <div className="mt-6">
-                <span className="font-display text-5xl font-bold">R$10,00</span>
-                <p className="text-sm text-muted-foreground">Pagamento único</p>
+              <div className="mt-4 sm:mt-6">
+                <span className="font-display text-4xl sm:text-5xl font-bold">R$10,00</span>
+                <p className="text-xs sm:text-sm text-muted-foreground">Pagamento único</p>
               </div>
-              <ul className="mt-6 flex-1 space-y-3">
+              <ul className="mt-4 sm:mt-6 flex-1 space-y-2.5 sm:space-y-3">
                 {["Action Verbs Flower", "What Can You See?", "What's In My Backpack?", "What's Baking In My Oven?", "What's Cooking In My Pot?", "Uso ilimitado", "Downloads ilimitados"].map((t) => (
-                  <li key={t} className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-leaf" />
+                  <li key={t} className="flex items-start gap-2.5 sm:gap-3 text-sm sm:text-base">
+                    <Check className="mt-0.5 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-leaf" />
                     <span className="font-semibold">{t}</span>
                   </li>
                 ))}
               </ul>
-              <button onClick={(e) => { e.preventDefault(); setIsUpsellOpen(true); }} className="btn-pop mt-8 w-full bg-secondary text-secondary-foreground">
+              <button onClick={(e) => { e.preventDefault(); setIsUpsellOpen(true); }} className="btn-pop mt-6 sm:mt-8 w-full bg-secondary text-secondary-foreground text-base sm:text-lg">
                 QUERO O KIT ESSENCIAL
               </button>
-              <div className="mt-4 flex items-center justify-center gap-2 text-sm font-bold text-muted-foreground animate-pulse">
+              <div className="mt-3 sm:mt-4 flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-muted-foreground animate-pulse">
                 <span>90% escolhem o plano Completo</span>
-                <ArrowRight className="hidden h-5 w-5 lg:block text-primary" />
-                <ArrowDown className="block h-5 w-5 lg:hidden text-primary" />
+                <ArrowRight className="hidden h-4 w-4 sm:h-5 sm:w-5 lg:block text-primary" />
+                <ArrowDown className="block h-4 w-4 sm:h-5 sm:w-5 lg:hidden text-primary" />
               </div>
             </div>
 
-            <div className="card-pop relative flex flex-col bg-card p-8 ring-4 ring-primary/30">
-              <div className="absolute -top-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border-[3px] border-foreground bg-primary px-5 py-1.5 font-display font-bold text-primary-foreground">
+            <div className="card-pop relative flex flex-col bg-card p-6 sm:p-8 ring-4 ring-primary/30">
+              <div className="absolute -top-4 sm:-top-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border-[3px] border-foreground bg-primary px-4 sm:px-5 py-1 sm:py-1.5 font-display text-xs sm:text-sm font-bold text-primary-foreground">
                 ⭐ MAIS ESCOLHIDO
               </div>
               <div className="flex items-center gap-3">
-                <Backpack className="h-8 w-8 text-primary" />
-                <h3 className="text-2xl">Kit Inglês Lúdico Completo</h3>
+                <Backpack className="h-7 w-7 sm:h-8 sm:w-8 text-primary" />
+                <h3 className="text-xl sm:text-2xl">Kit Inglês Lúdico Completo</h3>
               </div>
-              <div className="mt-6">
-                <p className="text-sm text-muted-foreground line-through">De R$97,90</p>
+              <div className="mt-4 sm:mt-6">
+                <p className="text-xs sm:text-sm text-muted-foreground line-through">De R$97,90</p>
                 <div className="flex items-baseline gap-2">
-                  <span className="font-display text-5xl font-bold text-primary">R$27,90</span>
-                  <span className="text-sm font-bold">à vista</span>
+                  <span className="font-display text-4xl sm:text-5xl font-bold text-primary">R$27,90</span>
+                  <span className="text-xs sm:text-sm font-bold">à vista</span>
                 </div>
-                <p className="text-sm text-muted-foreground">Pagamento único · acesso vitalício</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Pagamento único · acesso vitalício</p>
               </div>
-              <ul className="mt-6 flex-1 space-y-3">
+              <ul className="mt-4 sm:mt-6 flex-1 space-y-2.5 sm:space-y-3">
                 {["Tudo do Kit Essencial", "Comparatives & Superlatives Flower", "50 Dinâmicas de Inglês para Crianças", "+100 Atividades Educativas", "Literatura em Inglês", "Matemática em Inglês", "Vocabulary Practice", "Writing Activities", "Reading Activities", "Mini Books", "Uso ilimitado", "Downloads ilimitados", "Acesso vitalício"].map((t) => (
-                  <li key={t} className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <li key={t} className="flex items-start gap-2.5 sm:gap-3 text-sm sm:text-base">
+                    <Check className="mt-0.5 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-primary" />
                     <span className="font-semibold">{t}</span>
                   </li>
                 ))}
               </ul>
-              <a href="https://pay.wiapy.com/po8P1S8lls" className="btn-pop mt-8 w-full bg-primary text-primary-foreground">
+              <a href="https://pay.wiapy.com/po8P1S8lls" className="btn-pop mt-6 sm:mt-8 w-full bg-primary text-primary-foreground text-base sm:text-lg">
                 QUERO O KIT COMPLETO
               </a>
             </div>
@@ -489,19 +489,19 @@ function SalesPage() {
       </section>
 
       {/* EXPERT */}
-      <section className="px-4 py-20 bg-sun/10">
+      <section className="px-4 py-8 sm:py-10 md:py-14 bg-sun/10">
         <div className="mx-auto max-w-5xl">
-          <div className="card-pop flex flex-col md:flex-row items-center gap-10 bg-card p-8 md:p-12 border-4 border-foreground">
-            <div className="w-56 h-56 md:w-64 md:h-64 shrink-0 rounded-full border-[8px] border-secondary bg-primary/20 p-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-3 transition-transform hover:rotate-2">
+          <div className="card-pop flex flex-col md:flex-row items-center gap-6 sm:gap-8 md:gap-10 bg-card p-6 sm:p-8 md:p-12 border-3 sm:border-4 border-foreground">
+            <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 shrink-0 rounded-full border-[6px] sm:border-[8px] border-secondary bg-primary/20 p-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-3 transition-transform hover:rotate-2">
               <img src="/prof.png" alt="Teacher Hellen" className="w-full h-full rounded-full object-cover border-[3px] border-foreground bg-muted" />
             </div>
             <div className="text-center md:text-left flex-1">
-              <span className="tag bg-sun/30 text-foreground border-foreground mb-4">Quem criou o material?</span>
-              <h2 className="text-3xl md:text-4xl font-bold">Nice to meet you, sou a Teacher Hellen! 👋</h2>
-              <p className="mt-5 text-muted-foreground text-lg">
+              <span className="tag bg-sun/30 text-foreground border-foreground mb-3 text-xs sm:text-sm">Quem criou o material?</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Nice to meet you, sou a Teacher Hellen! 👋</h2>
+              <p className="mt-3 sm:mt-4 text-muted-foreground text-sm sm:text-base md:text-lg">
                 Sou professora apaixonada por educação infantil e criei o <strong>Kit Inglês Lúdico</strong> porque sei exatamente como é frustrante tentar prender a atenção das crianças com atividades sem graça.
               </p>
-              <p className="mt-4 text-muted-foreground text-lg">
+              <p className="mt-3 sm:mt-4 text-muted-foreground text-sm sm:text-base md:text-lg">
                 Todo o material foi testado e validado em sala de aula para trazer <strong>mais cor, movimento e diversão</strong> para o ensino. Meu objetivo é que seus alunos amem aprender inglês e que você tenha muito mais praticidade na hora de planejar suas aulas!
               </p>
             </div>
@@ -509,17 +509,16 @@ function SalesPage() {
         </div>
       </section>
 
-
       {/* GUARANTEE */}
-      <section className="px-4 py-20">
+      <section className="px-4 py-8 sm:py-10 md:py-14">
         <div className="mx-auto max-w-3xl">
-          <div className="card-pop relative bg-leaf/40 p-8 text-center md:p-12">
-            <div className="mx-auto inline-flex rounded-full border-[3px] border-foreground bg-card p-5">
-              <ShieldCheck className="h-12 w-12 text-leaf" />
+          <div className="card-pop relative bg-leaf/40 p-6 sm:p-8 text-center md:p-12">
+            <div className="mx-auto inline-flex rounded-full border-[3px] border-foreground bg-card p-3 sm:p-4 md:p-5">
+              <ShieldCheck className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-leaf" />
             </div>
-            <h2 className="mt-4 text-4xl">Garantia de 7 Dias</h2>
-            <p className="mt-3 text-lg font-semibold">Risco zero para você.</p>
-            <p className="mx-auto mt-2 max-w-xl text-muted-foreground">
+            <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl font-bold">Garantia de 7 Dias</h2>
+            <p className="mt-2 sm:mt-3 text-base sm:text-lg font-semibold">Risco zero para você.</p>
+            <p className="mx-auto mt-2 max-w-xl text-xs sm:text-sm md:text-base text-muted-foreground">
               Se o material não ajudar a tornar suas aulas mais divertidas e participativas, devolvemos seu
               investimento. Sem complicações.
             </p>
@@ -528,10 +527,10 @@ function SalesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="px-4 py-20">
+      <section className="px-4 py-8 sm:py-10 md:py-14">
         <div className="mx-auto max-w-3xl">
           <SectionTitle kicker="FAQ" title="Perguntas Frequentes" />
-          <div className="mt-12 space-y-3">
+          <div className="mt-6 sm:mt-8 space-y-2.5 sm:space-y-3">
             {faqs.map((f, i) => (
               <FaqItem key={f.q} q={f.q} a={f.a} defaultOpen={i === 0} />
             ))}
@@ -540,28 +539,28 @@ function SalesPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="px-4 pb-24 pt-10">
+      <section className="px-4 pt-4 pb-12 sm:pt-6 sm:pb-16">
         <div className="mx-auto max-w-4xl">
-          <div className="card-pop relative overflow-hidden bg-primary p-10 text-center text-primary-foreground md:p-16">
+          <div className="card-pop relative overflow-hidden bg-primary p-6 sm:p-10 text-center text-primary-foreground md:p-16">
             <div className="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-sun/70" />
             <div className="absolute -bottom-12 -right-8 h-48 w-48 rotate-12 rounded-3xl bg-accent/70" />
             <div className="relative">
-              <Heart className="mx-auto h-10 w-10" />
-              <h2 className="mt-4 text-4xl md:text-5xl">Ensinar inglês pode ser divertido.</h2>
-              <p className="mx-auto mt-4 max-w-xl text-lg opacity-90">
+              <Heart className="mx-auto h-8 w-8 sm:h-10 sm:w-10" />
+              <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Ensinar inglês pode ser divertido.</h2>
+              <p className="mx-auto mt-3 sm:mt-4 max-w-xl text-sm sm:text-base md:text-lg opacity-90">
                 Com as ferramentas certas, as crianças participam mais, aprendem mais e se divertem durante o
                 processo.
               </p>
-              <a href="#ofertas" className="btn-pop mt-8 bg-sun text-foreground">
+              <a href="#ofertas" className="btn-pop mt-6 sm:mt-8 bg-sun text-foreground text-base sm:text-lg py-3 px-6 sm:py-4 sm:px-8">
                 🎒 Garantir meu Kit agora
               </a>
-              <p className="mt-4 text-sm opacity-80">Acesso imediato · Garantia de 7 dias</p>
+              <p className="mt-3 sm:mt-4 text-xs sm:text-sm opacity-80">Acesso imediato · Garantia de 7 dias</p>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="border-t-[3px] border-foreground/10 px-4 py-8 text-center text-sm text-muted-foreground">
+      <footer className="border-t-[3px] border-foreground/10 px-4 py-6 text-center text-xs sm:text-sm text-muted-foreground">
         © {new Date().getFullYear()} Kit Inglês Lúdico · Todos os direitos reservados
       </footer>
       <PurchaseNotification />
