@@ -79,7 +79,7 @@ const resources = [
   { icon: CookingPot, label: "What's Cooking In My Pot?", color: "bg-leaf", img: "/produto5.png" },
   { icon: Flower2, label: "Comparatives & Superlatives Flower", color: "bg-primary/70", img: "/produto6.png" },
   { icon: BookOpen, label: "50 Dinâmicas de Inglês para Crianças", color: "bg-accent", img: "/produto7.png" },
-  { icon: Gift, label: "+100 Atividades Extras", color: "bg-sun", img: "/produto8.png" },
+  { icon: Gift, label: "+200 Atividades Extras", color: "bg-sun", img: "/produto8.png" },
 ];
 
 const faqs = [
@@ -167,10 +167,10 @@ function SalesPage() {
               <span className="relative z-10 text-primary">nunca mais</span>
               <span className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-2 sm:h-3 -rotate-1 rounded-full bg-sun" />
             </span>{" "}
-            serão as mesmas com essas +100 Atividades Lúdicas.
+            serão as mesmas com essas +200 Atividades Lúdicas.
           </h1>
           <p className="mt-4 sm:mt-5 max-w-2xl text-base sm:text-lg md:text-xl text-muted-foreground">
-            Chega de atividades que não prendem a atenção. Chegou o mega pacote com mais de uma centena de recursos divertidos, interativos e prontos para imprimir.
+            Chega de atividades que não prendem a atenção. Chegou o mega pacote com mais de duas centenas de recursos divertidos, interativos e prontos para imprimir.
           </p>
 
           <div className="relative my-6 sm:my-8 md:my-10 w-full max-w-2xl">
@@ -473,7 +473,7 @@ function SalesPage() {
                 <p className="text-xs sm:text-sm text-muted-foreground">Pagamento único · acesso vitalício</p>
               </div>
               <ul className="mt-4 sm:mt-6 flex-1 space-y-2.5 sm:space-y-3">
-                {["Tudo do Kit Essencial", "Comparatives & Superlatives Flower", "50 Dinâmicas de Inglês para Crianças", "+100 Atividades Educativas", "Literatura em Inglês", "Matemática em Inglês", "Vocabulary Practice", "Writing Activities", "Reading Activities", "Mini Books", "Uso ilimitado", "Downloads ilimitados", "Acesso vitalício"].map((t) => (
+                {["Tudo do Kit Essencial", "Comparatives & Superlatives Flower", "50 Dinâmicas de Inglês para Crianças", "+200 Atividades Educativas", "Literatura em Inglês", "Matemática em Inglês", "Vocabulary Practice", "Writing Activities", "Reading Activities", "Mini Books", "Uso ilimitado", "Downloads ilimitados", "Acesso vitalício"].map((t) => (
                   <li key={t} className="flex items-start gap-2.5 sm:gap-3 text-sm sm:text-base">
                     <Check className="mt-0.5 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-primary" />
                     <span className="font-semibold">{t}</span>
@@ -601,7 +601,7 @@ function UpsellModal({ isOpen }: { isOpen: boolean }) {
         
         <div className="mt-5 text-left bg-muted/50 p-4 rounded-xl border-[2px] border-dashed border-foreground/20">
           <ul className="space-y-2 text-sm font-semibold">
-            <li className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf" /> +100 Atividades Extras Educativas</li>
+            <li className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf" /> +200 Atividades Extras Educativas</li>
             <li className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf" /> 50 Dinâmicas Divertidas</li>
             <li className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf" /> Todos os 3 Bônus Inclusos</li>
           </ul>
