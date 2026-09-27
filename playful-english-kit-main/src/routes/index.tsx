@@ -480,7 +480,7 @@ function SalesPage() {
                   </li>
                 ))}
               </ul>
-              <a href="https://pay.hotmart.com/O107396866A?checkoutMode=10" className="btn-pop mt-6 sm:mt-8 w-full bg-primary text-primary-foreground text-base sm:text-lg">
+              <a href="https://checkout.wiven.com.br/checkout/cmuiznqta04vl01pufzmrcc16?offer=I9FKMEP" className="btn-pop mt-6 sm:mt-8 w-full bg-primary text-primary-foreground text-base sm:text-lg">
                 QUERO O KIT COMPLETO
               </a>
             </div>
@@ -610,10 +610,10 @@ function UpsellModal({ isOpen }: { isOpen: boolean }) {
         <p className="mt-4 text-xs font-bold text-primary/80">Essa é uma oportunidade única antes de concluir o seu pedido. Aproveite!</p>
 
         <div className="mt-6 flex flex-col gap-3">
-          <a href="https://pay.hotmart.com/O107396866A?off=7ny5fhmf&checkoutMode=10" className="btn-pop w-full bg-primary text-primary-foreground text-base h-auto py-3">
+          <a href="https://checkout.wiven.com.br/checkout/cmuiznqta04vl01pufzmrcc16?offer=32RJIWT" className="btn-pop w-full bg-primary text-primary-foreground text-base h-auto py-3">
             Sim! Quero a Versão Completa por R$ 17,90
           </a>
-          <a href="https://pay.hotmart.com/O107396866A?off=c3vcwx4n&checkoutMode=10" className="text-xs font-bold text-muted-foreground underline hover:text-foreground mt-2">
+          <a href="https://checkout.wiven.com.br/checkout/cmuiznqta04vl01pufzmrcc16?offer=BL9RUID" className="text-xs font-bold text-muted-foreground underline hover:text-foreground mt-2">
             Não, obrigada. Prefiro ficar apenas com o kit de R$ 10,00 por enquanto.
           </a>
         </div>
