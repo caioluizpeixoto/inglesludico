@@ -104,8 +104,13 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
         <script
           async
-          src="https://fluxotracker.vercel.app/t.js"
+          src="https://fluxotracker.vercel.app/t.js?k=95520d90c5154dcfb4f54a88231f8d6d&o=dcc65991-d937-427f-95a2-c92b6059d046"
           data-k="95520d90c5154dcfb4f54a88231f8d6d"
+          data-offer="dcc65991-d937-427f-95a2-c92b6059d046"
+          data-nowprocket=""
+          data-no-minify="1"
+          data-no-optimize="1"
+          data-cfasync="false"
         />
         <script
           dangerouslySetInnerHTML={{
