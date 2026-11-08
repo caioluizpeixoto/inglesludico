@@ -103,13 +103,9 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
         <script
-          src="https://cashflow.mentoriaprocesso.com/t/p.js?w=289278f7-baa6-4274-8916-613a4340b700&o=aa49d034-6c1b-442b-9fe4-a58455a4a83c"
-          data-offer="aa49d034-6c1b-442b-9fe4-a58455a4a83c"
-          data-nowprocket=""
-          data-no-minify="1"
-          data-no-optimize="1"
-          data-cfasync="false"
           async
+          src="https://fluxotracker.vercel.app/t.js"
+          data-k="95520d90c5154dcfb4f54a88231f8d6d"
         />
         <script
           dangerouslySetInnerHTML={{
