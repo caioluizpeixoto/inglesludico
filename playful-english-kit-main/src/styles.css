@@ -133,6 +133,12 @@
   .animate-marquee {
     animation: marquee 40s linear infinite;
   }
+  .animate-marquee-top {
+    animation: marquee 25s linear infinite;
+  }
+  .animate-marquee-ribbon {
+    animation: marquee 5s linear infinite;
+  }
   .pause-on-hover:hover {
     animation-play-state: paused;
   }

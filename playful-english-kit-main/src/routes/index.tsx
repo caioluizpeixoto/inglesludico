@@ -149,11 +149,49 @@ function SalesPage() {
   const [isUpsellOpen, setIsUpsellOpen] = useState(false);
   return (
     <main className="overflow-x-hidden">
-      <div className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-6xl px-4 py-2.5 text-center text-xs sm:text-sm font-bold md:text-base">
-          🔥 Oferta especial por tempo limitado · acesso vitalício
+      {/* TARJA ANIMADA BLACK FRIDAY NO TOPO */}
+      <a
+        href="#ofertas"
+        className="block bg-neutral-950 text-yellow-400 hover:text-yellow-300 py-2.5 sm:py-3 border-b-2 border-yellow-400/50 overflow-hidden relative shadow-md transition-colors group cursor-pointer"
+        title="Clique para ver a promoção de Black Friday"
+      >
+        <div className="flex w-max animate-marquee-top pause-on-hover">
+          <div className="flex shrink-0 items-center gap-6 text-xs sm:text-sm font-display font-black tracking-wider uppercase px-3">
+            <span className="inline-flex items-center gap-1.5 text-white bg-primary px-2.5 py-0.5 rounded-full text-[11px] font-black tracking-normal">
+              🔥 BLACK FRIDAY
+            </span>
+            <span>PROMOÇÃO DE BLACK FRIDAY</span>
+            <span className="text-white/50">•</span>
+            <span className="text-white">ATÉ 70% DE DESCONTO</span>
+            <span className="text-white/50">•</span>
+            <span>KIT COMPLETO DE <span className="line-through text-white/50">R$97,90</span> POR APENAS <span className="text-yellow-300 underline underline-offset-2">R$27,90</span></span>
+            <span className="text-white/50">•</span>
+            <span className="text-emerald-400">ACESSO VITALÍCIO</span>
+            <span className="text-white/50">•</span>
+            <span>OFERTA POR TEMPO LIMITADO</span>
+            <span className="text-white/50">•</span>
+            <span className="text-yellow-300">CLIQUE PARA APROVEITAR ⚡</span>
+            <span className="text-white/50">•</span>
+          </div>
+          <div className="flex shrink-0 items-center gap-6 text-xs sm:text-sm font-display font-black tracking-wider uppercase px-3" aria-hidden="true">
+            <span className="inline-flex items-center gap-1.5 text-white bg-primary px-2.5 py-0.5 rounded-full text-[11px] font-black tracking-normal">
+              🔥 BLACK FRIDAY
+            </span>
+            <span>PROMOÇÃO DE BLACK FRIDAY</span>
+            <span className="text-white/50">•</span>
+            <span className="text-white">ATÉ 70% DE DESCONTO</span>
+            <span className="text-white/50">•</span>
+            <span>KIT COMPLETO DE <span className="line-through text-white/50">R$97,90</span> POR APENAS <span className="text-yellow-300 underline underline-offset-2">R$27,90</span></span>
+            <span className="text-white/50">•</span>
+            <span className="text-emerald-400">ACESSO VITALÍCIO</span>
+            <span className="text-white/50">•</span>
+            <span>OFERTA POR TEMPO LIMITADO</span>
+            <span className="text-white/50">•</span>
+            <span className="text-yellow-300">CLIQUE PARA APROVEITAR ⚡</span>
+            <span className="text-white/50">•</span>
+          </div>
         </div>
-      </div>
+      </a>
 
       {/* HERO */}
       <section className="relative px-4 pt-6 pb-8 sm:pt-10 sm:pb-12 md:pt-16 md:pb-14">
@@ -457,6 +495,26 @@ function SalesPage() {
             </div>
 
             <div className="card-pop relative flex flex-col bg-card p-6 sm:p-8 ring-4 ring-primary/30">
+              {/* FAIXA DIAGONAL ANIMADA BLACK FRIDAY */}
+              <div className="absolute top-0 right-0 w-28 h-28 sm:w-36 sm:h-36 overflow-hidden rounded-tr-[calc(var(--radius)-3px)] pointer-events-none z-10">
+                <div className="absolute top-[20px] -right-[52px] sm:top-[26px] sm:-right-[46px] w-[190px] sm:w-[220px] rotate-45 bg-neutral-950 py-1 shadow-lg border-y-2 border-yellow-400 text-yellow-300 font-display font-black text-[9px] sm:text-[11px] uppercase tracking-wider overflow-hidden">
+                  <div className="flex w-max animate-marquee-ribbon">
+                    <div className="flex shrink-0 items-center gap-1.5 pr-1.5">
+                      <span>⚡ PROMOÇÃO DE BLACK FRIDAY</span>
+                      <span>•</span>
+                      <span>⚡ BLACK FRIDAY</span>
+                      <span>•</span>
+                    </div>
+                    <div className="flex shrink-0 items-center gap-1.5 pr-1.5" aria-hidden="true">
+                      <span>⚡ PROMOÇÃO DE BLACK FRIDAY</span>
+                      <span>•</span>
+                      <span>⚡ BLACK FRIDAY</span>
+                      <span>•</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="absolute -top-4 sm:-top-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border-[3px] border-foreground bg-primary px-4 sm:px-5 py-1 sm:py-1.5 font-display text-xs sm:text-sm font-bold text-primary-foreground">
                 ⭐ MAIS ESCOLHIDO
               </div>
