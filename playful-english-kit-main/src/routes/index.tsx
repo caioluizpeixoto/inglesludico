@@ -647,17 +647,36 @@ function UpsellModal({ isOpen }: { isOpen: boolean }) {
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-sm p-4">
-      <div className="card-pop relative w-full max-w-md bg-card p-6 text-center md:p-8 animate-in zoom-in-95 duration-200 border-4 border-primary">
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border-[3px] border-foreground bg-primary px-4 py-1 text-sm font-bold text-primary-foreground">
-          🎁 OFERTA ESPECIAL
+      <div className="card-pop relative w-full max-w-md bg-card p-6 text-center md:p-8 animate-in zoom-in-95 duration-200 border-4 border-foreground ring-4 ring-primary/30">
+        
+        {/* SELO CIRCULAR BLACK FRIDAY NA QUINA */}
+        <div className="absolute -top-5 -right-3 sm:-top-6 sm:-right-4 -rotate-12 z-20 pointer-events-none">
+          <div className="flex h-16 w-16 sm:h-20 sm:w-20 flex-col items-center justify-center rounded-full border-[3px] border-yellow-400 bg-neutral-950 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            <span className="text-[9px] sm:text-[10px] font-black uppercase text-amber-400 tracking-wider">SELO</span>
+            <span className="text-[11px] sm:text-xs font-black uppercase text-white leading-none">BLACK</span>
+            <span className="text-[11px] sm:text-xs font-black uppercase text-yellow-400 leading-none">FRIDAY</span>
+            <span className="text-[8px] sm:text-[9px] font-bold text-emerald-400">🔥 -80%</span>
+          </div>
+        </div>
+
+        {/* BADGE CENTRAL NO TOPO */}
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border-[3px] border-foreground bg-neutral-950 px-4 py-1 text-xs sm:text-sm font-display font-black text-yellow-400 shadow-md flex items-center gap-1.5 uppercase">
+          <span className="bg-primary text-white text-[10px] px-2 py-0.5 rounded-full font-black">🔥 BLACK FRIDAY</span>
+          <span>OFERTA EXCLUSIVA</span>
         </div>
         
-        <h2 className="mt-4 text-2xl font-bold md:text-3xl">Espere! Temos uma surpresa para você 😍</h2>
-        <p className="mt-3 text-muted-foreground">
-          Antes de finalizar, liberamos um <strong>upgrade exclusivo</strong>. Por apenas <strong>R$ 7,90 a mais</strong> (total R$ 17,90), você pode levar a versão Completa com:
+        <h2 className="mt-4 text-2xl font-bold md:text-3xl">Espere! Oferta de Black Friday 😍</h2>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Antes de finalizar, liberamos um <strong>upgrade de Black Friday exclusivo</strong>. Por apenas <strong>R$ 7,90 a mais</strong> (total R$ 17,90), você leva o Kit Completo com tudo incluso:
         </p>
+
+        <div className="mt-4 inline-flex items-center gap-2 bg-neutral-950 text-yellow-300 border-2 border-yellow-400/60 px-3 py-1 rounded-full text-xs font-display font-bold">
+          <span>De <span className="line-through text-white/60">R$97,90</span></span>
+          <span className="text-white">•</span>
+          <span>Por apenas <span className="text-yellow-400 font-black text-sm">R$17,90</span></span>
+        </div>
         
-        <div className="mt-5 text-left bg-muted/50 p-4 rounded-xl border-[2px] border-dashed border-foreground/20">
+        <div className="mt-4 text-left bg-muted/50 p-4 rounded-xl border-[2px] border-dashed border-foreground/20">
           <ul className="space-y-2 text-sm font-semibold">
             <li className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf" /> +200 Atividades Extras Educativas</li>
             <li className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf" /> 50 Dinâmicas Divertidas</li>
